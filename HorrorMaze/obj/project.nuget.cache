@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VrC8iMk4aZx+hgfXLJZAKI/648Quz90f/Hf4WxkurpbDBM02nWBVjge1lQenUofz4OlKx9nArUqC3cpdyHQncQ==",
+  "dgSpecHash": "VgiZj9/Fo3qC12ZQUCOJtP/9V2NwyzxNZJQa+PMxrbE4SFrFgCD1YBfExoJHPnlqf0Ehc0iBxc+bI3pKBzaQSg==",
   "success": true,
-  "projectFilePath": "F:\\Study\\Project\\MyProjects\\CS\\HorrorMaze\\HorrorMaze\\HorrorMaze.csproj",
+  "projectFilePath": "F:\\Study\\Project\\HorrorMaze\\HorrorMaze\\HorrorMaze.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Дима\\.nuget\\packages\\libuv\\1.9.1\\libuv.1.9.1.nupkg.sha512",
     "C:\\Users\\Дима\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\1.1.0\\microsoft.codeanalysis.analyzers.1.1.0.nupkg.sha512",

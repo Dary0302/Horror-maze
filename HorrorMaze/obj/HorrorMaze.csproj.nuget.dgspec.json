@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Study\\Project\\MyProjects\\CS\\HorrorMaze\\HorrorMaze\\HorrorMaze.csproj": {}
+    "F:\\Study\\Project\\HorrorMaze\\HorrorMaze\\HorrorMaze.csproj": {}
   },
   "projects": {
-    "F:\\Study\\Project\\MyProjects\\CS\\HorrorMaze\\HorrorMaze\\HorrorMaze.csproj": {
+    "F:\\Study\\Project\\HorrorMaze\\HorrorMaze\\HorrorMaze.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Study\\Project\\MyProjects\\CS\\HorrorMaze\\HorrorMaze\\HorrorMaze.csproj",
+        "projectUniqueName": "F:\\Study\\Project\\HorrorMaze\\HorrorMaze\\HorrorMaze.csproj",
         "projectName": "HorrorMaze",
-        "projectPath": "F:\\Study\\Project\\MyProjects\\CS\\HorrorMaze\\HorrorMaze\\HorrorMaze.csproj",
+        "projectPath": "F:\\Study\\Project\\HorrorMaze\\HorrorMaze\\HorrorMaze.csproj",
         "packagesPath": "C:\\Users\\Дима\\.nuget\\packages\\",
-        "outputPath": "F:\\Study\\Project\\MyProjects\\CS\\HorrorMaze\\HorrorMaze\\obj\\",
+        "outputPath": "F:\\Study\\Project\\HorrorMaze\\HorrorMaze\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>F:/Study/Project/MyProjects/CS/HorrorMaze/HorrorMaze/Content/SplashFront.spritefont</SourceFile>
+  <SourceFile>F:/Study/Project/HorrorMaze/HorrorMaze/Content/SplashFront.spritefont</SourceFile>
   <SourceTime>2024-02-16T21:05:19.2387082+05:00</SourceTime>
-  <DestFile>F:/Study/Project/MyProjects/CS/HorrorMaze/HorrorMaze/Content/bin/Windows/Content/SplashFont.xnb</DestFile>
-  <DestTime>2024-02-16T21:05:55.1107774+05:00</DestTime>
+  <DestFile>F:/Study/Project/HorrorMaze/HorrorMaze/Content/bin/Windows/Content/SplashFont.xnb</DestFile>
+  <DestTime>2024-04-10T12:18:26.5344822+05:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
   <ImporterTime>2022-07-26T16:44:56+05:00</ImporterTime>
   <Processor>FontDescriptionProcessor</Processor>

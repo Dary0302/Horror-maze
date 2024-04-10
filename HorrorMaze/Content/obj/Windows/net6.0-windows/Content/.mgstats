@@ -1,1 +1,4 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"F:/Study/Project/HorrorMaze/HorrorMaze/Content/MusicMainMenu.ogg","F:/Study/Project/HorrorMaze/HorrorMaze/Content/bin/Windows/Content/MusicMainMenu.xnb","SongProcessor","SongContent",224304,131,0,3350078
+"F:/Study/Project/HorrorMaze/HorrorMaze/Content/podzemele.png","F:/Study/Project/HorrorMaze/HorrorMaze/Content/bin/Windows/Content/Background.xnb","TextureProcessor","Texture2DContent",35464,2359381,0,0745451
+"F:/Study/Project/HorrorMaze/HorrorMaze/Content/SplashFront.spritefont","F:/Study/Project/HorrorMaze/HorrorMaze/Content/bin/Windows/Content/SplashFont.xnb","FontDescriptionProcessor","SpriteFontContent",2264,532383,0,1198677

@@ -4,9 +4,9 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>F:/Study/Project/MyProjects/CS/HorrorMaze/HorrorMaze/Content/MusicMainMenu.ogg</File>
-    <File>F:/Study/Project/MyProjects/CS/HorrorMaze/HorrorMaze/Content/podzemele.png</File>
-    <File>F:/Study/Project/MyProjects/CS/HorrorMaze/HorrorMaze/Content/SplashFront.spritefont</File>
+    <File>F:/Study/Project/HorrorMaze/HorrorMaze/Content/MusicMainMenu.ogg</File>
+    <File>F:/Study/Project/HorrorMaze/HorrorMaze/Content/podzemele.png</File>
+    <File>F:/Study/Project/HorrorMaze/HorrorMaze/Content/SplashFront.spritefont</File>
   </SourceFiles>
   <DestFiles>
     <File>MusicMainMenu</File>
