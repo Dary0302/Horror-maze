@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>F:/Study/Project/MyProjects/CS/HorrorMaze/HorrorMaze/Content/MusicMainMenu.ogg</File>
+    <File>F:/Study/Project/MyProjects/CS/HorrorMaze/HorrorMaze/Content/podzemele.png</File>
+    <File>F:/Study/Project/MyProjects/CS/HorrorMaze/HorrorMaze/Content/SplashFront.spritefont</File>
+  </SourceFiles>
+  <DestFiles>
+    <File>MusicMainMenu</File>
+    <File>Background</File>
+    <File>SplashFont</File>
+  </DestFiles>
+</SourceFileCollection>
