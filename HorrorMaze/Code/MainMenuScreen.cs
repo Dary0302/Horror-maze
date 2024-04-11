@@ -9,14 +9,13 @@ namespace HorrorMaze
         public static Texture2D Background { get; set; }
         public static SpriteFont Font { get; set; }
         public static Song Music { get; set; }
-        private static readonly Vector2 TextPosition = new Vector2(500, 900);
+        private static readonly Vector2 TextPosition = new(500, 900);
 
         public static void Draw(SpriteBatch spriteBatch)
         {
             MediaPlayer.Resume();
             spriteBatch.Draw(Background, new Rectangle(0, 0, 1920, 1800), Color.White);
             spriteBatch.DrawString(Font, "Нажмите E для продолжения!", TextPosition, Color.White);
-            
         }
     }
 }

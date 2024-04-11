@@ -1,11 +1,13 @@
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
 namespace HorrorMaze;
 
 public class Monster
 {
-    public Point CurrentPosition;
+    public Vector2 CurrentPosition;
     public readonly Maze Maze;
+    public readonly float Speed = 50;
 
     public Monster(Maze maze)
     {
@@ -13,7 +15,7 @@ public class Monster
         CurrentPosition = Maze.StartPlayerPosition;
     }
 
-    public void MovePlayer(KeyboardState keyboardState)
+    public void MoveMonster(KeyboardState keyboardState)
     {
         if (false)
         {
@@ -33,10 +35,10 @@ public class Monster
         }
     }
     
-    private void TryMoveMonster(Point direction)
+    private void TryMoveMonster(Vector2 direction)
     {
         var tempPosition = CurrentPosition + direction;
-        if (Maze.InBounds(tempPosition) && Maze.MazeObjects[tempPosition.X, tempPosition.Y] != MapObject.Wall)
+        if (Maze.InBounds(tempPosition) && Maze.MazeObjects[(int)tempPosition.X, (int)tempPosition.Y] != MapObject.Wall)
             CurrentPosition = tempPosition;
     }
 }
