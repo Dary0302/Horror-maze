@@ -1,6 +1,6 @@
 namespace HorrorMaze;
 
-public enum MapObject
+public enum MazeObject
 {
     Wall,
     Empty

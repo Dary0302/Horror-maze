@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+﻿/*using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Media;
 
@@ -18,4 +18,4 @@ namespace HorrorMaze
             spriteBatch.DrawString(Font, "Нажмите E для продолжения!", TextPosition, Color.White);
         }
     }
-}
+}*/

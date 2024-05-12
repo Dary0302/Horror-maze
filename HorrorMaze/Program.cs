@@ -1,3 +1,2 @@
-﻿
-using var game = new HorrorMaze.Game1();
+﻿using var game = new HorrorMaze.HorrorMazeGame();
 game.Run();
