@@ -1,4 +1,5 @@
 ﻿using HorrorMaze.Components;
+using HorrorMaze.Core;
 using HorrorMaze.Core.Maze;
 using HorrorMaze.Core.Player;
 using HorrorMaze.Core.Services;
@@ -22,12 +23,8 @@ namespace HorrorMaze
             graphics = new(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
-            Services.AddService(new Maze(Mazes.FirstMaze));
-            Services.AddService(new Player(new(200, 200)));
-            Services.AddService(new SimpleGameService(Services.GetService<Maze>(), Services.GetService<Player>()));
+            
             Components.Add(new MainMenuComponent(this));
-            Components.Add(new MapComponent(this));
-            Components.Add(new PlayerComponent(this));
         }
 
         protected override void Initialize()
@@ -49,7 +46,17 @@ namespace HorrorMaze
             {
                 case StateGame.MainMenuScreen:
                     if (keyboardState.IsKeyDown(Keys.E))
+                    {
+                        Services.AddService(new Maze(Mazes.NextLevel()));
+                        Services.AddService(new Player(PlayerPositions.NextPositions()));
+                        Services.AddService(new SimpleGameService(Services.GetService<Maze>(), Services.GetService<Player>()));
+            
+                        Components.Add(new MazeComponent(this));
+                        Components.Add(new PlayerComponent(this));
                         StateGame = StateGame.Game;
+                    }
+                        
+                    
                     break;
                 case StateGame.Game:
                     if (keyboardState.IsKeyDown(Keys.Enter))

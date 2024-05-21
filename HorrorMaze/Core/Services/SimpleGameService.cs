@@ -1,22 +1,25 @@
-
 using Microsoft.Xna.Framework;
 
 namespace HorrorMaze.Core.Services;
 
 public class SimpleGameService
 {
-    public readonly Maze.Maze Maze;
-    public readonly Player.Player Player;
+    private readonly Maze.Maze maze;
+    private readonly Player.Player player;
 
     public SimpleGameService(Maze.Maze maze, Player.Player player)
     {
-        this.Maze = maze;
-        this.Player = player;
+        this.maze = maze;
+        this.player = player;
     }
 
     public void Move(Vector2 position)
     {
-        if (Maze.ObjectInBounds(Player.Position + position))
-            Player.Move(position);
+        if (!maze.ObjectInBounds(player.Position + position))
+            return;
+        
+        player.Move(position);
+        maze.ObjectOnPortal(player.Position);
+        maze.ObjectOnTrapHatch(player.Position);
     }
 }

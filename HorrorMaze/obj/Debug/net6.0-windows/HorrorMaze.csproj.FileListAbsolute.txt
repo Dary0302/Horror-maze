@@ -93,3 +93,4 @@ F:\Study\Project\HorrorMaze\HorrorMaze\bin\Debug\net6.0-windows\runtimes\win-x86
 F:\Study\Project\HorrorMaze\HorrorMaze\bin\Debug\net6.0-windows\Content\floor.xnb
 F:\Study\Project\HorrorMaze\HorrorMaze\bin\Debug\net6.0-windows\Content\player.xnb
 F:\Study\Project\HorrorMaze\HorrorMaze\bin\Debug\net6.0-windows\Content\portal.xnb
+F:\Study\Project\HorrorMaze\HorrorMaze\bin\Debug\net6.0-windows\Content\TrapHatch.xnb

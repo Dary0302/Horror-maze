@@ -1,4 +1,4 @@
-namespace HorrorMaze;
+namespace HorrorMaze.Core;
 
 // Состояния игры
 public enum StateGame

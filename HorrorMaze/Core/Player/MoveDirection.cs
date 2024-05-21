@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework;
 
-namespace HorrorMaze;
+namespace HorrorMaze.Core.Player;
 
 public static class MoveDirection
 {
