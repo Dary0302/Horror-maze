@@ -3,7 +3,6 @@ using HorrorMaze.Core;
 using HorrorMaze.Core.Maze;
 using HorrorMaze.Core.Player;
 using HorrorMaze.Core.Services;
-using HorrorMaze.Core.Terrains;
 using HorrorMaze.Initialization;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -51,12 +50,11 @@ namespace HorrorMaze
                         Services.AddService(new Player(PlayerPositions.NextPositions()));
                         Services.AddService(new SimpleGameService(Services.GetService<Maze>(), Services.GetService<Player>()));
             
+                        Components.Add(new MainMenuComponent(this));
                         Components.Add(new MazeComponent(this));
                         Components.Add(new PlayerComponent(this));
                         StateGame = StateGame.Game;
                     }
-                        
-                    
                     break;
                 case StateGame.Game:
                     if (keyboardState.IsKeyDown(Keys.Enter))

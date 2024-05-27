@@ -9,7 +9,7 @@ public class Player : IPlayer
     public readonly float Hp = 1000;
     public static bool IsMoving;
 
-    private bool IsDead => Hp <= 0 ? true : false;
+    //private bool IsDead => Hp <= 0 ? true : false;
 
     public Player(Vector2 position)
     {

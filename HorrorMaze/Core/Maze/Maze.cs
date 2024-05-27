@@ -1,4 +1,6 @@
 using System.Linq;
+using HorrorMaze.Components;
+using HorrorMaze.Core.Player;
 using HorrorMaze.Core.Terrains;
 using Microsoft.Xna.Framework;
 
@@ -42,24 +44,27 @@ public class Maze
 
     public bool ObjectInBounds(Vector2 point)
         => point is { X: >= 0, Y: >= 0 }
-        && point.X < Terrains.Length
-        && point.Y < Terrains[0].Length
-        && Terrains[(int)point.X][(int)point.Y] is Floor or Portal or TrapHatch;
+            && point.X < Terrains.Length
+            && point.Y < Terrains[0].Length
+            && Terrains[(int)point.X][(int)point.Y] is Floor or Portal or TrapHatch;
 
     public void ObjectOnPortal(Vector2 point)
     {
-        if (portalPosition == point)
-            Status = MazeStatus.Completed;
+        if (portalPosition != point)
+            return;
+
+        Status = MazeStatus.Completed;
+        MazeComponent.IsGameStateChanged = true;
     }
 
     public void ObjectOnTrapHatch(Vector2 point)
     {
-        if (Terrains[(int)point.X][(int)point.Y] is TrapHatch)
-            Status = MazeStatus.Loosed;
-    }
+        if (Terrains[(int)point.X][(int)point.Y] is not TrapHatch && Mazes.IdCurrentLevel != Mazes.GetCountLevels() + 1)
+            return;
 
-    public ITerrain GetTerrain(Vector2 position)
-    {
-        return Terrains[(int)position.X][(int)position.Y];
+        Mazes.GameLose();
+        PlayerPositions.GameLose();
+        Status = MazeStatus.Loosed;
+        MazeComponent.IsGameStateChanged = true;
     }
 }

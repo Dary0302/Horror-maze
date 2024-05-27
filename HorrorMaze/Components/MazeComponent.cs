@@ -16,10 +16,9 @@ public class MazeComponent : DrawableGameComponent
     private Texture2D portalTexture;
     private Texture2D trapHatchTexture;
     private float cellSize;
+    public static bool IsGameStateChanged;
 
-    public MazeComponent(Game game) : base(game)
-    {
-    }
+    public MazeComponent(Game game) : base(game) { }
 
     protected override void LoadContent()
     {
@@ -30,13 +29,8 @@ public class MazeComponent : DrawableGameComponent
         cellSize = (float)GraphicsDevice.DisplayMode.Height / 10;
     }
 
-    public override void Draw(GameTime gameTime)
+    private void ChangeStatus(Maze maze)
     {
-        if (HorrorMazeGame.StateGame != StateGame.Game)
-            return;
-        
-        var maze = Game.Services.GetService<Maze>();
-        
         switch (maze.Status)
         {
             case MazeStatus.Completed:
@@ -46,16 +40,28 @@ public class MazeComponent : DrawableGameComponent
                 Game.Services.AddService(new Maze(Mazes.NextLevel()));
                 Game.Services.AddService(new Player(PlayerPositions.NextPositions()));
                 Game.Services.AddService(new SimpleGameService(Game.Services.GetService<Maze>(), Game.Services.GetService<Player>()));
-                maze = Game.Services.GetService<Maze>();
                 break;
             case MazeStatus.Loosed:
                 Game.Services.RemoveService(typeof(SimpleGameService));
                 Game.Services.RemoveService(typeof(Maze));
                 Game.Services.RemoveService(typeof(Player));
+                Game.Components.Clear();
                 HorrorMazeGame.StateGame = StateGame.MainMenuScreen;
                 break;
         }
-        
+        IsGameStateChanged = false;
+    }
+
+    public override void Draw(GameTime gameTime)
+    {
+        if (HorrorMazeGame.StateGame != StateGame.Game)
+            return;
+
+        var maze = Game.Services.GetService<Maze>();
+
+        if (IsGameStateChanged)
+            ChangeStatus(maze);
+
         spriteBatch.Begin();
         foreach (var i in Enumerable.Range(0, maze.MapObjects.Length))
         {

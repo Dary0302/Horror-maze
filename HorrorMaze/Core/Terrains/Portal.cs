@@ -1,6 +1,3 @@
 namespace HorrorMaze.Core.Terrains;
 
-public class Portal : ITerrain
-{
-    
-}
+public class Portal : ITerrain { }

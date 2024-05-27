@@ -1,5 +1,3 @@
 namespace HorrorMaze.Core.Terrains;
 
-public class TrapHatch : ITerrain
-{
-}
+public class TrapHatch : ITerrain { }

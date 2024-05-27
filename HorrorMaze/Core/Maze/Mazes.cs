@@ -2,7 +2,7 @@ namespace HorrorMaze.Core.Maze;
 
 public static class Mazes
 {
-    private static int idStartLevel;
+    public static int IdCurrentLevel { get; private set; }
 
     private static readonly string[][] Levels =
     {
@@ -34,16 +34,16 @@ public static class Mazes
             "##.########"
         },
         new[]{ 
-            "#############.#",
-            "###      ##   #",
-            "##   ### ## ###",
-            "## x ###    ###",
-            "###  ##########",
-            "##x ####x######",
-            "###        ###",
-            "###############"
+            "#########.#",
+            "##    #   #",
+            "#   # # ###",
+            "# x #   ###",
+            "##  #######",
+            "#x ##x#####",
+            "##      ###",
+            "###########"
         },
-        new[]{ 
+        /*new[]{ 
             "###############",
             "###############",
             "###############",
@@ -52,8 +52,18 @@ public static class Mazes
             "###############",
             "###############",
             "###############"
-        },
+        },*/
     };
+    
+    public static string[] NextLevel()
+    {
+        if (IdCurrentLevel == Levels.Length)
+            IdCurrentLevel = 0;
 
-    public static string[] NextLevel() => idStartLevel < Levels.Length ? Levels[idStartLevel++] : Levels[idStartLevel - 1];
+        return Levels[IdCurrentLevel++];
+    }
+
+    public static int GetCountLevels() => Levels.Length;
+
+    public static void GameLose() => IdCurrentLevel = 0;
 }

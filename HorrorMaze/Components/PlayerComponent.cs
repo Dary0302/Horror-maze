@@ -34,9 +34,10 @@ public class PlayerComponent : DrawableGameComponent
         if (HorrorMazeGame.StateGame != StateGame.Game || Player.IsMoving)
             return;
 
+        var player = Game.Services.GetService<Player>();
         spriteBatch.Begin();
         spriteBatch.Draw(playerTexture,
-            new(previousState.X * cellSize + cellSize * 0.1f, previousState.Y * cellSize),
+            new(player.Position.X * cellSize + cellSize * 0.1f, player.Position.Y * cellSize),
             null,
             Color.White,
             0f,
@@ -93,6 +94,9 @@ public class PlayerComponent : DrawableGameComponent
 
     public override void Update(GameTime gameTime)
     {
+        if (Player.IsMoving)
+            return;
+        
         var keyboardState = Keyboard.GetState();
         if (keyboardState.IsKeyDown(Keys.W))
         {
