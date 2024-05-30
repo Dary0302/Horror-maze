@@ -9,7 +9,7 @@ public static class GraphicsExtensions
         var currentDisplayMode = graphics.GraphicsDevice.DisplayMode;
         graphics.PreferredBackBufferHeight = currentDisplayMode.Height;
         graphics.PreferredBackBufferWidth = currentDisplayMode.Width;
-        graphics.IsFullScreen = false;
+        graphics.IsFullScreen = true;
         return graphics;
     }
 }

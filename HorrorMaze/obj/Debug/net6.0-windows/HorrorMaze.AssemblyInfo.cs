@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HorrorMaze")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4202c2285af9191961728b89102cac05117e8aad")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+033eede3e3c02db343b516c6cd33f8ef11b57149")]
 [assembly: System.Reflection.AssemblyProductAttribute("HorrorMaze")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HorrorMaze")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

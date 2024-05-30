@@ -18,7 +18,9 @@ public class MazeComponent : DrawableGameComponent
     private float cellSize;
     public static bool IsGameStateChanged;
 
-    public MazeComponent(Game game) : base(game) { }
+    public MazeComponent(Game game) : base(game)
+    {
+    }
 
     protected override void LoadContent()
     {
@@ -45,7 +47,9 @@ public class MazeComponent : DrawableGameComponent
                 Game.Services.RemoveService(typeof(SimpleGameService));
                 Game.Services.RemoveService(typeof(Maze));
                 Game.Services.RemoveService(typeof(Player));
+                
                 Game.Components.Clear();
+                
                 HorrorMazeGame.StateGame = StateGame.MainMenuScreen;
                 break;
         }

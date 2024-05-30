@@ -22,7 +22,7 @@ namespace HorrorMaze
             graphics = new(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
-            
+
             Components.Add(new MainMenuComponent(this));
         }
 
@@ -44,13 +44,14 @@ namespace HorrorMaze
             switch (StateGame)
             {
                 case StateGame.MainMenuScreen:
+                    Components.Add(new MainMenuComponent(this));
+
                     if (keyboardState.IsKeyDown(Keys.E))
                     {
                         Services.AddService(new Maze(Mazes.NextLevel()));
                         Services.AddService(new Player(PlayerPositions.NextPositions()));
                         Services.AddService(new SimpleGameService(Services.GetService<Maze>(), Services.GetService<Player>()));
-            
-                        Components.Add(new MainMenuComponent(this));
+
                         Components.Add(new MazeComponent(this));
                         Components.Add(new PlayerComponent(this));
                         StateGame = StateGame.Game;
@@ -58,7 +59,9 @@ namespace HorrorMaze
                     break;
                 case StateGame.Game:
                     if (keyboardState.IsKeyDown(Keys.Enter))
+                    {
                         StateGame = StateGame.MainMenuScreen;
+                    }
                     break;
             }
 
